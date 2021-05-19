@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+
+    <ScrollView
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentEnd="true">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/current_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textColor="#FF9800"
+            android:textStyle="bold"
+            android:textSize="50sp"
+            android:padding="2dp"
+            />
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/answer_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/redo_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+        android:text="@string/creator_string"
+        android:textColor="#B2FF9800"
+        android:textSize="25sp"/>
+
+    <LinearLayout
+        android:id="@+id/other_section_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_layout"
+        android:layout_margin="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/restore_button"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:background="@drawable/ic_restore"
+            android:backgroundTint="#E6FF9800"
+            />
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/redo_button"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/button_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="#F44336"
+        android:shadowColor="@color/white"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="40"
+        android:text=" ⌫"
+        android:textColor="@color/white"
+        android:textDirection="ltr"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/button_layout"
+        android:layout_marginBottom="5dp"
+        android:background="#CCFF9800" />
+
+
+    <FrameLayout
+        android:id="@+id/button_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/layout_buttons_calculator" />
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/restore_section"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/other_section_layout"
+        android:layout_marginEnd="100dp"
+        android:background="@color/black"
+        android:visibility="invisible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/restore_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/clear_history" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/clear_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/orange"
+            android:text="@string/clear_history" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

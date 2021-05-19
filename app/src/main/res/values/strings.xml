@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="creator_string">by: Ervin</string>
+    <string name="clear_history">clear history</string>
+    <string name="test">Test</string>
+    <string name="unit_converter">Unit Converter</string>
+
+    <string-array name="length" >
+        <item> meter</item>
+        <item> centimeter </item>
+        <item> millimeters</item>
+    </string-array>
+
+    <string-array name="temperature" >
+        <item> celsius</item>
+        <item> fahrenheit </item>
+    </string-array>
+    
+</resources>

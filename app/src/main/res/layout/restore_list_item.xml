@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:id="@+id/listItem_layout"
+    >
+
+    <TextView
+        android:id="@+id/position_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/teal_700"
+        />
+
+    <TextView
+        android:id="@+id/text_listItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/test"
+        android:textSize="30sp"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/orange"
+        android:layout_alignParentEnd="true"
+       />
+
+
+    <TextView
+        android:id="@+id/answer_listItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="23sp"
+        android:layout_below="@+id/text_listItem"
+        android:textColor="@color/teal_200"
+        android:layout_alignParentEnd="true"
+        android:text="@string/test"
+        android:paddingBottom="20dp"
+        android:layout_marginEnd="5dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/orange"
+        android:layout_below="@id/answer_listItem"
+        />
+
+</RelativeLayout>
