@@ -2,80 +2,9 @@
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/black"
     android:columnCount="4"
-    android:rowCount="5">
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/clear_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_button_default"
-        android:backgroundTint="#E91E1E"
-        android:shadowColor="@color/white"
-        android:shadowDx="0.0"
-        android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="C"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_margin="3dp"
-        android:paddingVertical="7dp"
-        />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/parenthesis_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_button_default"
-        android:backgroundTint="@color/orange"
-        android:padding="3dp"
-        android:shadowColor="@color/white"
-        android:shadowDx="0.0"
-        android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="( )"
-        android:textColor="@color/white"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        android:layout_margin="3dp"
-        android:paddingVertical="7dp"
-        />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/modulo_sign"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_button_default"
-        android:backgroundTint="@color/orange"
-        android:shadowColor="@color/white"
-        android:shadowDx="0.0"
-        android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="%"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_margin="3dp"
-        android:paddingVertical="7dp"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/division_sign"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:background="@drawable/round_button_default"
-        android:backgroundTint="#BB5CF6"
-        android:shadowColor="@color/white"
-        android:shadowDx="0.0"
-        android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="÷"
-        android:textColor="@color/white"
-        android:textSize="35sp"
-        android:layout_margin="3dp"
-        android:paddingVertical="5dp"/>
+    android:rowCount="5"
+    android:background="@color/black">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/number_one"
@@ -83,16 +12,15 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button_default"
         android:backgroundTint="@color/blue"
-        android:shadowColor="@color/white"
+        android:text="1"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="1"
         android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:shadowColor="@color/white"
+        android:shadowRadius="40"
+        android:textSize="40sp"
         android:layout_margin="3dp"
-        android:paddingVertical="7dp"/>
+        android:paddingVertical="8dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/number_two"
@@ -100,16 +28,15 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button_default"
         android:backgroundTint="@color/blue"
-        android:shadowColor="@color/white"
+        android:text="2"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="2"
         android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:shadowColor="@color/white"
+        android:shadowRadius="40"
+        android:textSize="40sp"
         android:layout_margin="3dp"
-        android:paddingVertical="7dp"/>
+        android:paddingVertical="8dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/number_three"
@@ -117,35 +44,34 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button_default"
         android:backgroundTint="@color/blue"
-        android:shadowColor="@color/white"
+        android:text="3"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="3"
         android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:shadowColor="@color/white"
+        android:shadowRadius="40"
+        android:textSize="40sp"
         android:layout_margin="3dp"
-        android:paddingVertical="7dp"/>
+        android:paddingVertical="8dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/multiplication_sign"
+        android:id="@+id/undo_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
         android:background="@drawable/round_button_default"
-        android:backgroundTint="#BB5CF6"
-        android:shadowColor="@color/white"
+        android:backgroundTint="#F44336"
+        android:text="⌫"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="×"
-        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="35sp"
-        android:textStyle="bold"
+        android:shadowColor="@color/white"
+        android:shadowRadius="40"
+        android:textSize="40sp"
+        android:layout_marginLeft="20dp"
         android:layout_margin="3dp"
-        android:paddingVertical="5dp"/>
+        android:paddingVertical="8dp"/>
+
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/number_four"
@@ -153,16 +79,16 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button_default"
         android:backgroundTint="@color/blue"
-        android:shadowColor="@color/white"
+        android:textColor="@color/white"
+        android:text="4"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
         android:shadowRadius="40"
-        android:text="4"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:shadowColor="@color/white"
+        android:textSize="40sp"
         android:layout_margin="3dp"
-        android:paddingVertical="7dp"/>
+        android:paddingVertical="8dp"/>
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/number_five"
@@ -170,16 +96,15 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button_default"
         android:backgroundTint="@color/blue"
-        android:shadowColor="@color/white"
+        android:text="5"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="5"
         android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:shadowColor="@color/white"
+        android:shadowRadius="40"
+        android:textSize="40sp"
         android:layout_margin="3dp"
-        android:paddingVertical="7dp"/>
+        android:paddingVertical="8dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/number_six"
@@ -187,34 +112,32 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button_default"
         android:backgroundTint="@color/blue"
-        android:shadowColor="@color/white"
+        android:text="6"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="6"
         android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:shadowColor="@color/white"
+        android:shadowRadius="40"
+        android:textSize="40sp"
         android:layout_margin="3dp"
-        android:paddingVertical="7dp"/>
+        android:paddingVertical="8dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/subtraction_sign"
+        android:id="@+id/clear_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
         android:background="@drawable/round_button_default"
-        android:backgroundTint="#BB5CF6"
-        android:shadowColor="@color/white"
+        android:backgroundTint="#E91E1E"
+        android:text="C"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="–"
         android:textColor="@color/white"
-        android:textSize="35sp"
-        android:textStyle="bold"
+        android:shadowColor="@color/white"
+        android:shadowRadius="40"
+        android:textSize="40sp"
+        android:layout_marginLeft="20dp"
         android:layout_margin="3dp"
-        android:paddingVertical="5dp"/>
+        android:paddingVertical="8dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/number_seven"
@@ -222,15 +145,15 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button_default"
         android:backgroundTint="@color/blue"
-        android:shadowColor="@color/white"
+        android:text="7"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="7"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:shadowColor="@color/white"
+        android:shadowRadius="40"
+        android:textSize="40sp"
         android:layout_margin="3dp"
-        android:paddingVertical="7dp"/>
+        android:paddingVertical="8dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/number_eight"
@@ -238,16 +161,15 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button_default"
         android:backgroundTint="@color/blue"
-        android:shadowColor="@color/white"
+        android:text="8"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="8"
         android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:shadowColor="@color/white"
+        android:shadowRadius="40"
+        android:textSize="40sp"
         android:layout_margin="3dp"
-        android:paddingVertical="7dp"/>
+        android:paddingVertical="8dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/number_nine"
@@ -255,34 +177,32 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button_default"
         android:backgroundTint="@color/blue"
-        android:shadowColor="@color/white"
+        android:text="9"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="9"
         android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:shadowColor="@color/white"
+        android:shadowRadius="40"
+        android:textSize="40sp"
         android:layout_margin="3dp"
-        android:paddingVertical="7dp"/>
+        android:paddingVertical="8dp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/addition_sign"
+        android:id="@+id/up_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
         android:background="@drawable/round_button_default"
-        android:backgroundTint="#BB5CF6"
-        android:shadowColor="@color/white"
+        android:backgroundTint="@color/green"
+        android:text="▲"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="+"
         android:textColor="@color/white"
-        android:textSize="35sp"
-        android:textStyle="bold"
+        android:shadowColor="@color/white"
+        android:shadowRadius="40"
+        android:textSize="40sp"
+        android:layout_marginLeft="20dp"
         android:layout_margin="3dp"
-        android:paddingVertical="5dp"/>
+        android:paddingVertical="8dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/positive_negative"
@@ -290,16 +210,15 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button_default"
         android:backgroundTint="@color/blue"
-        android:shadowColor="@color/white"
+        android:text="+/-"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="+/-"
         android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:shadowColor="@color/white"
+        android:shadowRadius="40"
+        android:textSize="40sp"
         android:layout_margin="3dp"
-        android:paddingVertical="7sp"/>
+        android:paddingVertical="8dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/number_zero"
@@ -307,16 +226,15 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button_default"
         android:backgroundTint="@color/blue"
-        android:shadowColor="@color/white"
+        android:text="0"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="0"
         android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:shadowColor="@color/white"
+        android:shadowRadius="40"
+        android:textSize="40sp"
         android:layout_margin="3dp"
-        android:paddingVertical="7dp"/>
+        android:paddingVertical="8dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/number_decimal"
@@ -324,33 +242,32 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button_default"
         android:backgroundTint="@color/blue"
-        android:shadowColor="@color/white"
+        android:text="•"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="•"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:shadowColor="@color/white"
+        android:shadowRadius="40"
+        android:textSize="40sp"
         android:layout_margin="3dp"
-        android:paddingVertical="7dp"/>
+        android:paddingVertical="8dp"/>
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/equal_sign"
+        android:id="@+id/down_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:background="@drawable/round_button_default"
-        android:backgroundTint="#4CAF50"
-        android:shadowColor="@color/white"
+        android:backgroundTint="@color/green"
+        android:text="▼"
         android:shadowDx="0.0"
         android:shadowDy="0.0"
-        android:shadowRadius="40"
-        android:text="="
         android:textColor="@color/white"
-        android:textSize="35sp"
-        android:textStyle="bold"
+        android:shadowColor="@color/white"
+        android:shadowRadius="40"
+        android:textSize="40sp"
         android:layout_margin="3dp"
-        android:paddingVertical="5dp"/>
+        android:paddingVertical="8dp"/>
 
 </GridLayout>

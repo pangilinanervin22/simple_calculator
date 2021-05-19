@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".UnitConverterActivity">
+
+    <LinearLayout
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/back_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_baseline_arrow_back"
+            android:textColor="@color/blue"
+            android:layout_marginStart="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unit_converter"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp" />
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/unit_navigator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/layout_unit_list" />
+        </FrameLayout>
+
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/navigator_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/unit_navigator"
+        android:layout_marginTop="15dp"
+        android:background="@color/orange"  />
+
+    <Spinner
+        android:id="@+id/spinner_first_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/navigator_line"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/first_unit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_first_unit"
+        android:layout_toStartOf="@+id/first_unit"
+        android:background="@null"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_marginEnd="10dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/first_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/first_unit_text"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        />
+
+    <View
+        android:id="@+id/first_unit_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/first_unit_text"
+        android:background="#CCFF9800" />
+
+    <Spinner
+        android:id="@+id/spinner_second_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/first_unit_line"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/second_unit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_second_unit"
+        android:layout_toStartOf="@+id/second_unit"
+        android:background="@null"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginEnd="10dp"/>
+
+    <TextView
+        android:id="@+id/second_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/second_unit_text"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+     />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/second_unit_text"
+        android:layout_marginBottom="5dp"
+        android:background="#CCFF9800"  />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/layout_buttons_converter" />
+    </FrameLayout>
+</RelativeLayout>

@@ -1,6 +1,7 @@
 package com.example.calculator;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             redoButton, divisionButton, multiplicationButton, additionButton, subtractionButton, numberOneButton,
             numberTwoButton, numberThreeButton, numberFourButton, numberFiveButton, numberSixButton,
             numberSevenButton, numberEightButton, numberNineButton, numberZeroButton, decimalButton,
-            restoreListButton, clearHistory;
+            restoreListButton, clearHistory, converterStartButton;
 
     @SuppressLint("StaticFieldLeak")
     private static TextView currentText, answerText;
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         answerText = findViewById(R.id.answer_result);
 
         // button
+        converterStartButton = findViewById(R.id.converter_start_button);
         clearHistory = findViewById(R.id.clear_history);
         restoreListButton = findViewById(R.id.restore_button);
         parenthesisButton = findViewById(R.id.parenthesis_button);
@@ -87,27 +89,21 @@ public class MainActivity extends AppCompatActivity {
     //  all onclick method
     @SuppressLint("UseCompatLoadingForDrawables")
     private void onClickAction() {
-        // operation buttons
-        onClickAbstraction(percentButton, "%");
-        onClickAbstraction(subtractionButton, " – ");  // "–" em dash for minus sign
-        onClickAbstraction(additionButton, " + ");
-        onClickAbstraction(multiplicationButton, " × ");
-        onClickAbstraction(divisionButton, " ÷ ");
-        onClickAbstraction(positiveNegativeButton, "-");  // "–" hyphen for negative value
-
-        // number buttons
-        onClickAbstraction(numberZeroButton, "0");
-        onClickAbstraction(numberOneButton, "1");
-        onClickAbstraction(numberTwoButton, "2");
-        onClickAbstraction(numberThreeButton, "3");
-        onClickAbstraction(numberFourButton, "4");
-        onClickAbstraction(numberFiveButton, "5");
-        onClickAbstraction(numberSixButton, "6");
-        onClickAbstraction(numberSevenButton, "7");
-        onClickAbstraction(numberEightButton, "8");
-        onClickAbstraction(numberNineButton, "9");
-
         //special buttons
+
+        converterStartButton.setOnClickListener(v -> startActivity
+                (new Intent(this, UnitConverterActivity.class)));
+
+        restoreListButton.setOnClickListener(v -> {
+            if (isRestoreSectionClick) {
+                restoreSection.setVisibility(View.VISIBLE);
+                restoreListButton.setBackground(getDrawable(R.drawable.ic_calculate));
+            } else {
+                restoreSection.setVisibility(View.GONE);
+                restoreListButton.setBackground(getDrawable(R.drawable.ic_restore));
+            }
+            isRestoreSectionClick = !isRestoreSectionClick;
+        });
         parenthesisButton.setOnClickListener(v -> {
             String temp = stringManipulation.addingParenthesis(currentString);
             onClickAbstraction(parenthesisButton, temp);
@@ -147,23 +143,32 @@ public class MainActivity extends AppCompatActivity {
             adapter.setItemLinkedList(restorePoints);
         });
 
-        restoreListButton.setOnClickListener(v -> {
-            if (isRestoreSectionClick) {
-                restoreSection.setVisibility(View.VISIBLE);
-                restoreListButton.setBackground(getDrawable(R.drawable.ic_calculate));
-            } else {
-                restoreSection.setVisibility(View.GONE);
-                restoreListButton.setBackground(getDrawable(R.drawable.ic_restore));
-            }
-            isRestoreSectionClick = !isRestoreSectionClick;
-        });
+        // operation buttons
+        onClickAbstraction(percentButton, "%");
+        onClickAbstraction(subtractionButton, " – ");  // "–" em dash for minus sign
+        onClickAbstraction(additionButton, " + ");
+        onClickAbstraction(multiplicationButton, " × ");
+        onClickAbstraction(divisionButton, " ÷ ");
+        onClickAbstraction(positiveNegativeButton, "-");  // "–" hyphen for negative value
+
+        // number buttons
+        onClickAbstraction(numberZeroButton, "0");
+        onClickAbstraction(numberOneButton, "1");
+        onClickAbstraction(numberTwoButton, "2");
+        onClickAbstraction(numberThreeButton, "3");
+        onClickAbstraction(numberFourButton, "4");
+        onClickAbstraction(numberFiveButton, "5");
+        onClickAbstraction(numberSixButton, "6");
+        onClickAbstraction(numberSevenButton, "7");
+        onClickAbstraction(numberEightButton, "8");
+        onClickAbstraction(numberNineButton, "9");
 
     }
 
     // for button that input string
     private void onClickAbstraction(Button button, String text) {
         button.setOnClickListener(v -> {
-            if(textResize())
+            if (textResize())
                 return;
 
             darkenOnClick(button);
@@ -238,6 +243,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     boolean first20 = true, first40 = true;
+
     public boolean textResize() {
         float textSize = currentText.getTextSize() / getResources().getDisplayMetrics().scaledDensity;
         int length = currentText.length();
@@ -253,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
         if (length >= 50 || answerText.length() >= 30) {
             Toast.makeText(this, "Too much number", Toast.LENGTH_SHORT).show();
             return true;
-        }else if (length < 15) {
+        } else if (length < 15) {
             currentText.setTextSize(50);
         } else if (length == 15 && first20) {
             first20 = false;

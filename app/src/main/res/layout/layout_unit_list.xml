@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/length_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
+        android:background="@drawable/round_button_yellow"
+        android:paddingHorizontal="10dp"
+        android:shadowColor="@color/white"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="40"
+        android:text="@string/length"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/temperature_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
+        android:background="@drawable/round_button_default"
+        android:paddingHorizontal="10dp"
+        android:shadowColor="@color/white"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="40"
+        android:text="@string/temperature"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/mass_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
+        android:background="@drawable/round_button_default"
+        android:paddingHorizontal="10dp"
+        android:shadowColor="@color/white"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="40"
+        android:text="@string/mass"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/area_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
+        android:background="@drawable/round_button_default"
+        android:paddingHorizontal="10dp"
+        android:shadowColor="@color/white"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="40"
+        android:text="@string/area"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/volume_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
+        android:background="@drawable/round_button_default"
+        android:paddingHorizontal="10dp"
+        android:shadowColor="@color/white"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="40"
+        android:text="@string/volume"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/speed_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
+        android:background="@drawable/round_button_default"
+        android:paddingHorizontal="10dp"
+        android:shadowColor="@color/white"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="40"
+        android:text="@string/speed"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/time_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
+        android:background="@drawable/round_button_default"
+        android:paddingHorizontal="10dp"
+        android:shadowColor="@color/white"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="40"
+        android:text="@string/time"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/data_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
+        android:background="@drawable/round_button_default"
+        android:paddingHorizontal="10dp"
+        android:shadowColor="@color/white"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="40"
+        android:text="@string/data"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</LinearLayout>
